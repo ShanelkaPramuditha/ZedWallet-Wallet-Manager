@@ -13,10 +13,19 @@
         android:theme="@style/Theme.ZedTask"
         tools:targetApi="31">
         <activity
-            android:name=".ExpenseActiv"
+            android:name=".DisplayData"
             android:exported="false" />
         <activity
-            android:name=".DisplayData"
+            android:name=".DisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StatsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExpenseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IncomeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -25,7 +34,7 @@
             android:name=".SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".IncomeActivity"
+            android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".OnboardingActivity"

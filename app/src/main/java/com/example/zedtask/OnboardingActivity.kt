@@ -14,7 +14,7 @@ class OnboardingActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_onboarding)
+        setContentView(R.layout.onboarding_activity)
 
         val layouts = intArrayOf(
             R.layout.onboarding_activity_1,
@@ -35,7 +35,7 @@ class OnboardingActivity: AppCompatActivity() {
             if (current < layouts.size) {
                 viewPager.currentItem = current
             } else {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, Register::class.java))
                 finish()
             }
         }
@@ -53,7 +53,7 @@ class OnboardingActivity: AppCompatActivity() {
 
         val btnSkip = findViewById<Button>(R.id.btnSkip)
         btnSkip.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, Register::class.java))
         }
 
         //updateButtonVisibility(viewPager.currentItem)
