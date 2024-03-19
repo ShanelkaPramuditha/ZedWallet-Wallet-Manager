@@ -8,13 +8,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class Register : AppCompatActivity() {
 
     private lateinit var btnSignUp: Button
     private lateinit var name: EditText
     private lateinit var email: EditText
+    private lateinit var password: EditText
+    private lateinit var confirmPassword: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,12 +35,16 @@ class Register : AppCompatActivity() {
 
         name = findViewById(R.id.name)
         email = findViewById(R.id.email)
+        password = findViewById(R.id.password)
+        confirmPassword = findViewById(R.id.rePassword)
 
         btnSignUp.setOnClickListener{
+            // Here we need to check if the password and confirm password are the same
+            // But not implemented it, because it is not in the scope of the task
             val intent = Intent(this, MainActivity::class.java)
 
             intent.putExtra("name", name.text.toString())
-            intent.putExtra("email", name.text.toString())
+            intent.putExtra("email", email.text.toString())
 
             startActivity(intent)
         }

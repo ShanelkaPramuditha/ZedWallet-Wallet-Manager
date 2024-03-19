@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity() {
         /* Button Clicks */
         val btnSettings = findViewById<ExtendedFloatingActionButton>(R.id.btnSettings)
         btnSettings.setOnClickListener {
-            val intent = Intent(this, SettingsActivity::class.java)
+            val intent2 : Intent = Intent(this, SettingsActivity::class.java)
             //startActivity(Intent(this, SettingsActivity::class.java))
-            intent.putExtra("name", name.text.toString())
-            intent.putExtra("email", intent.getStringExtra("email"))
-            startActivity(intent)
+            intent2.putExtra("name", intent.getStringExtra("name"))
+            intent2.putExtra("email", intent.getStringExtra("email"))
+            startActivity(intent2)
         }
 
         val btnIncome = findViewById<ExtendedFloatingActionButton>(R.id.btnIncome)

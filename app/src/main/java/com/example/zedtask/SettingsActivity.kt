@@ -1,29 +1,33 @@
 package com.example.zedtask
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 class SettingsActivity : AppCompatActivity() {
-    private lateinit var nameTextView: TextView
-    private lateinit var emailTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.setting_activity)
 
-        // Initialize views
-        nameTextView = findViewById(R.id.nameText)
-        emailTextView = findViewById(R.id.emailText)
+        val userName = intent.getStringExtra("name")
+        val userEmail = intent.getStringExtra("email")
 
-        // Get the values from the intent extras
-        val name = intent.getStringExtra("name")
-        val email = intent.getStringExtra("email")
+        val uName = findViewById<TextView>(R.id.nameText)
+        val uEmail = findViewById<TextView>(R.id.emailText)
 
-        // Set the values to the respective TextViews in SettingsActivity
-        nameTextView.text = name
-        emailTextView.text = email
+        uName.text = userName
+        uEmail.text = userEmail
+
+        val signOutButton = findViewById<Button>(R.id.signOutButton)
+        signOutButton.setOnClickListener {
+            startActivity(Intent(this, Register::class.java))
+        }
     }
+
+
 }
