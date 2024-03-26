@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">ZedTask</string>
+    <!-- App Name -->
+    <string name="app_name">ZedWallet</string>
+    <!-- Onboarding Screen Contents -->
+    <string name="onboarding1_description">Welcome\nto\nZedWallet</string>
+    <string name="onboarding2_description">ZedWallet is a wallet management app that helps you manage your pocket balance and get things done.</string>
+    <string name="onboarding3_description">Pocket Wallet Manager empowers you to take control of your finances. Effortlessly track expenses, categorize transactions, and set goals. Gain clarity on your spending for a successful financial journey!</string>
+    <!-- Descriptions -->
+    <string name="onboarding_viewfinder">Onboarding ViewFinder</string>
+    <string name="header">ZedWallet </string>
+    <!-- Buttons -->
+    <string name="next_button">NEXT</string>
+    <string name="skip_button">SKIP</string>
+    <string name="back_button">BACK</string>
+    <string name="done_button">DONE</string>
+    <string name="btn_expense">EXPENSE</string>
+    <string name="btn_income">INCOME</string>
+    <string name="btn_settings_desc">Settings</string>
+    <!-- Income and Expense -->
+    <string name="add_income_title">INCOME</string>
+    <string name="add_expense_title">EXPENSE</string>
+    <string name="btn_add_rem">ADD</string>
+
+    <!-- Others -->
+    <string name="list_scroll">Scroll View</string>
 </resources>
