@@ -1,6 +1,8 @@
 package com.example.zedtask
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,10 +25,15 @@ class DisplayData : AppCompatActivity() {
         description = findViewById<TextView>(R.id.outDescription)
         amount = findViewById<TextView>(R.id.outAmount)
 
-        val resultDescription = "Description: " + intent.getStringExtra("description")
-        val resultAmount = "Amount: " + intent.getStringExtra("amount")
+        val resultDescription = intent.getStringExtra("description")
+        val resultAmount = intent.getStringExtra("amount")
 
         description.text = resultDescription
         amount.text = resultAmount
+
+        val okBtn = findViewById<Button>(R.id.okBtn)
+        okBtn.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
     }
 }
